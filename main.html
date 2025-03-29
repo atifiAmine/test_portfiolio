@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Test</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Mon Portfolio</h1>
+        <p>Bienvenue sur mon portfolio test</p>
+    </header>
+    <main>
+        <button onclick="afficherMessage()">Clique-moi</button>
+        <p id="message"></p>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
+
+/* style.css */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 50px;
+}
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* script.js */
+function afficherMessage() {
+    document.getElementById('message').textContent = "Bouton cliqué !";
+}
