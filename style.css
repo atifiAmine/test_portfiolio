@@ -1,0 +1,118 @@
+.nav-header {
+    top : 0;
+    background-color: rgba(135, 127, 127, 0.764);
+    height : 40px;
+    width : 100%;
+    align-items: right;
+    justify-content: flex-end;
+    align-items : center;
+    display : flex;
+    margin-right: 20px;
+}
+
+.nav-header a{
+    text-decoration: none;
+    color : white;
+    height : auto;
+    
+}.a1,.a2,.a3,.a4 {
+   margin-left : auto;
+}
+
+.menu_presentation{
+    display : flex;
+    flex-direction: column;
+    width : 100%;
+    justify-content: center;
+}
+
+.menu_presentation h1 {
+   text-align : center;
+}
+
+
+.menu-compétences {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Section compétences */
+.compétences {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centre les éléments horizontalement */
+    width: 100%;
+}
+
+.menu_compétences h1{
+    text-align: center;
+}
+
+.chaque_competences {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* Centre les éléments horizontalement */
+    align-items: center; /* Centre verticalement */
+    gap: 20px;
+    width: 100%;
+}
+
+.chaque_competences th{
+    background-color: rgb(165, 143, 212);
+    top : 0;
+    margin-top: 0px;
+}
+
+/* Tableaux de compétences */
+.Progammation, .Base_de_donnée, .Outils, .Logiciels {
+    background-color: white;
+    padding: 15px;
+    border-radius: 1em;
+    width: 20%;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.Portfolio{
+    flex-direction: column;
+    display : flex;
+    align-items: center;
+    width : 100%;
+
+}
+
+.chaque_portfolio{
+    display : flex;
+    flex-direction: row;
+    flex-direction:center ;
+    align-items: center;
+    
+}
+
+.chaque_portfolio h1{
+    text-align: center;
+    
+}
+
+.Site_running, .Site_smartcontainer {
+    border-radius: 1em;
+    padding: 15px;
+    background-color: white;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 40%;
+}
+
+.Site_running, .Site_smartcontainer img {
+    height : auto;
+    width: 80%;
+}
+
+
+
+
+
