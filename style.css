@@ -80,6 +80,7 @@ body {
     text-align: center;
     padding: 50px 20px;
     background-color: #e3f2fd;
+    
 }
 
 .chaque_portfolio {
@@ -90,22 +91,23 @@ body {
     margin-top: 20px;
 }
 
-.Site_running, .Site_smartcontainer {
+.Site_running, .Site_smartcontainer, .maquette_led {
     background: white;
     padding: 20px;
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    width: 300px; /* Ensure all items have the same width */
+    flex: 1; /* Allow items to grow and shrink as needed */
+    max-width: 300px; /* Limit the maximum width to ensure they stay aligned */
 }
 
-.Site_running img, .Site_smartcontainer img {
+.Site_running img, .Site_smartcontainer img, .maquette_led img {
     width: 100%;
     height: auto;
     border-radius: 5px;
     margin-top: 10px;
 }
-
 /* Responsive Design */
 @media (max-width: 768px) {
     .chaque_competences, .chaque_portfolio {
@@ -120,3 +122,19 @@ body {
         margin: 5px 0;
     }
 } /* Ajout de styles responsives pour améliorer l'affichage sur mobile */
+
+footer ul {
+    display : flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+footer ul li {
+    margin: 0 10px; /* Add some space between the icons */
+}
+
+footer ul li img {
+    width: 20px;
+    height: auto;
+    vertical-align: middle; /* Align the images vertically in the middle */
+}
