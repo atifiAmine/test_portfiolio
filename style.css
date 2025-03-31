@@ -1,118 +1,122 @@
+/* Styles généraux */
+body {
+    background-color: #f4f4f4;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation */
 .nav-header {
-    top : 0;
-    background-color: rgba(135, 127, 127, 0.764);
-    height : 40px;
-    width : 100%;
-    align-items: right;
-    justify-content: flex-end;
-    align-items : center;
-    display : flex;
-    margin-right: 20px;
-}
-
-.nav-header a{
-    text-decoration: none;
-    color : white;
-    height : auto;
-    
-}.a1,.a2,.a3,.a4 {
-   margin-left : auto;
-}
-
-.menu_presentation{
-    display : flex;
-    flex-direction: column;
-    width : 100%;
+    background-color: #444; /* Ajout d'un fond sombre pour la navigation afin d'améliorer la lisibilité */
+    padding: 15px;
+    display: flex;
     justify-content: center;
+    position: fixed; /* Fixation de la barre de navigation en haut pour qu'elle reste visible en scrollant */
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.nav-header a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-header a:hover {
+    color: #ff9800;
+}
+
+/* Présentation */
+.menu_presentation {
+    padding: 80px 20px 20px; /* Ajout d'un espace en haut pour éviter que le texte ne soit caché sous la navigation */
+    text-align: center;
+    max-width: 800px;
+    margin: auto;
 }
 
 .menu_presentation h1 {
-   text-align : center;
+    color: #333;
+    font-size: 2em;
 }
 
-
-.menu-compétences {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    gap: 20px;
-}
-
-/* Section compétences */
-.compétences {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centre les éléments horizontalement */
-    width: 100%;
-}
-
-.menu_compétences h1{
+/* Section Compétences */
+.menu_compétences {
     text-align: center;
+    padding: 50px 20px;
+    background-color: white;
 }
 
 .chaque_competences {
     display: flex;
-    flex-direction: row;
-    justify-content: center; /* Centre les éléments horizontalement */
-    align-items: center; /* Centre verticalement */
+    flex-wrap: wrap; /* Disposition flexible pour que les éléments s'adaptent mieux aux différentes tailles d'écran */
+    justify-content: center;
     gap: 20px;
-    width: 100%;
+    margin-top: 20px;
 }
 
-.chaque_competences th{
-    background-color: rgb(165, 143, 212);
-    top : 0;
-    margin-top: 0px;
-}
-
-/* Tableaux de compétences */
-.Progammation, .Base_de_donnée, .Outils, .Logiciels {
-    background-color: white;
+.chaque_competences table {
+    background: #fff;
     padding: 15px;
-    border-radius: 1em;
-    width: 20%;
+    border-radius: 10px; /* Ajout d'arrondis pour un design plus moderne */
+    width: 250px;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ajout d'une ombre pour donner du relief aux cartes et sections */
 }
 
-
-
-.Portfolio{
-    flex-direction: column;
-    display : flex;
-    align-items: center;
-    width : 100%;
-
+.chaque_competences th {
+    background-color: #6200ea;
+    color: white;
+    padding: 10px;
+    border-radius: 5px 5px 0 0;
 }
 
-.chaque_portfolio{
-    display : flex;
-    flex-direction: row;
-    flex-direction:center ;
-    align-items: center;
-    
-}
-
-.chaque_portfolio h1{
+/* Section Portfolio */
+.Portfolio {
     text-align: center;
-    
+    padding: 50px 20px;
+    background-color: #e3f2fd;
+}
+
+.chaque_portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
 }
 
 .Site_running, .Site_smartcontainer {
-    border-radius: 1em;
-    padding: 15px;
-    background-color: white;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 40%;
+    width: 300px;
 }
 
-.Site_running, .Site_smartcontainer img {
-    height : auto;
-    width: 80%;
+.Site_running img, .Site_smartcontainer img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-top: 10px;
 }
 
-
-
-
-
+/* Responsive Design */
+@media (max-width: 768px) {
+    .chaque_competences, .chaque_portfolio {
+        flex-direction: column;
+        align-items: center;
+    }
+    .nav-header {
+        flex-direction: column;
+        align-items: center;
+    }
+    .nav-header a {
+        margin: 5px 0;
+    }
+} /* Ajout de styles responsives pour améliorer l'affichage sur mobile */
